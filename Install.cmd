@@ -12,10 +12,10 @@ echo   [2] Scan and list detected AI coding tools
 echo   [3] Exit
 echo.
 set /p choice="Select an option [1-3, Default=1]: "
-if "%choice%"=="" set choice=1
-if "%choice%"=="1" goto do_install
-if "%choice%"=="2" goto do_list
-if "%choice%"=="3" goto do_exit
+if "!choice!"=="" set choice=1
+if "!choice:~0,1!"=="1" goto do_install
+if "!choice:~0,1!"=="2" goto do_list
+if "!choice:~0,1!"=="3" goto do_exit
 goto do_install
 
 :do_install
