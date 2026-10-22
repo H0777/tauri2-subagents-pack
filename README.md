@@ -143,7 +143,7 @@ Choose the installer matching your operating system:
 ### هيكلية المجلدات المنظمة
 
 ```
-zcode-tauri2-win11-v2/
+tauri2-subagents-pack/
 ├── 📁 agents/            # تعريفات الوكلاء العشرة الأساسية لـ Tauri 2
 ├── 📁 profiles/          # ملفات التشكيلات المصدّرة للبيئات الأخرى (Cursor, Claude, Codex, إلخ)
 ├── 📁 docs/              # مجلد التوثيق والأدلة المتقدمة
