@@ -1,0 +1,486 @@
+[
+  {
+    "Path": "AGENTS.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "agents/tauri-architect.md",
+    "SHA256": "a776debcbf7c0200524dffe4ae1e268cca298f24dc12ae8ce796905a25984e9a"
+  },
+  {
+    "Path": "agents/tauri-frontend.md",
+    "SHA256": "f1d2b0d3df8161a7034e255d64061d6b7ddfda05de262a5368270b82a4d4844a"
+  },
+  {
+    "Path": "agents/tauri-ipc.md",
+    "SHA256": "2f944d0f9e2c0741fe6e45b2d756a3a2ff11e1df20b6512a8252412e5e73b5b5"
+  },
+  {
+    "Path": "agents/tauri-perf.md",
+    "SHA256": "6b54d141db909acbda9da70b7e4ca24c5a6419f28b7e3496fce9af676ba23013"
+  },
+  {
+    "Path": "agents/tauri-plugins.md",
+    "SHA256": "bea6d9a5bf5ee049f234864282724009c91aac082ba4cf7ba9606de53c78c3c8"
+  },
+  {
+    "Path": "agents/tauri-release.md",
+    "SHA256": "aa7286d3c05cbaafa37f0c35e5e489ba458c36ddda0742190e4de71794cda61a"
+  },
+  {
+    "Path": "agents/tauri-rust.md",
+    "SHA256": "d2147491e5313ddbd6255339d2e166469e718b152c364535bec1f5e705dc4d23"
+  },
+  {
+    "Path": "agents/tauri-security.md",
+    "SHA256": "0ec607b39bd06f769dcb85f88492d43458ab857d301a94430ab8d3712efdc42a"
+  },
+  {
+    "Path": "agents/tauri-test.md",
+    "SHA256": "1293d198a16628f6f2bf3046b05cbe7369121dea5facc1b88c61b1da6d199f4c"
+  },
+  {
+    "Path": "agents/tauri-windows.md",
+    "SHA256": "d8b59dfe57f5d17b99fc236ed928e6106b16f5b58b4b44c16fc9c183f67ad3ac"
+  },
+  {
+    "Path": "build-profiles.ps1",
+    "SHA256": "ad06e21139e16f6f6d8c951875be79738167a9f6c27e9790159aea38835b9891"
+  },
+  {
+    "Path": "CHANGELOG.md",
+    "SHA256": "5047809c67a714966f1caac358f6c6204c0c4aa61d8011c660e8434c22bb3e21"
+  },
+  {
+    "Path": "FORMAT-VALIDATION.json",
+    "SHA256": "dbb7d27a22dbac86ee60a6c6c3434e543adba3c439d814ff0fa64387aee5d57d"
+  },
+  {
+    "Path": "Install-All.cmd",
+    "SHA256": "e7dc56a528ceb32ffd758272f6cf9c55f8d6b513aefc2830919b719d01b666af"
+  },
+  {
+    "Path": "install-all.ps1",
+    "SHA256": "333c9810cbe6d222510d03e6c6f2a8b2f5eb9f95adf2f8a90141902a68e0d5c2"
+  },
+  {
+    "Path": "install.ps1",
+    "SHA256": "d78ced96ca64be0839bd410e6ede4bf9156f591bb06bb30ab5f086ee86cdd57f"
+  },
+  {
+    "Path": "INSTALL.txt",
+    "SHA256": "69ce0aded2584f3f543da0e32642019e4c13a87aff200c84c6f46a3e01692484"
+  },
+  {
+    "Path": "LEGACY-AGENTS.md",
+    "SHA256": "d25bf72c2c76830e570d40742338e9f583090868b4d9f22f6809ba7da9099041"
+  },
+  {
+    "Path": "List-Programs.cmd",
+    "SHA256": "381729dff176d9c4b4b837ef860b181dd2dac0a31eb5bc86ab70eed7bb1cb219"
+  },
+  {
+    "Path": "MULTI-HARNESS.md",
+    "SHA256": "44bdc1696e37590c22fe3d8c4bc7dfaf3737d3803a91e19c5877e3fcd3962327"
+  },
+  {
+    "Path": "package-tools.ps1",
+    "SHA256": "5913dea77ed83f1774b9680dc07fba280eaf926b3a5a4026ede8d3abe7317844"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-architect.md",
+    "SHA256": "af6418b2321c6ddd3105e1ff589b9a63cabd7060bcec8ff72b3c51917a1ae449"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-frontend.md",
+    "SHA256": "1b2187189b225a12b655d32943d0dfdfe490ddc6a8bb72350ab220f03774a2d1"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-ipc.md",
+    "SHA256": "dd167cdf9951f4dcf1eb24cbddbd2bc7a9063c8fd2abfb717b1d7a7e127f2cbb"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-perf.md",
+    "SHA256": "07e181eddcf2c20ee35e72615d57c9522f7081b0f23b459162586c8cc8c1d97e"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-plugins.md",
+    "SHA256": "18cb3fab59e20cbeb16c6fd831c777a62b363ca80e1a43dee3f0e239c02ded52"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-release.md",
+    "SHA256": "7602d43ab89ba7bdaf8882632dd458762f022d6265db87147521c6b38b6b3b79"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-rust.md",
+    "SHA256": "a8a08df94e1817024c8054826bb3cb9ce03b71fa35f8ee1ed280e582ac4b66b4"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-security.md",
+    "SHA256": "7bdabd6e6d447f192f643ef2cd2943f27a30dd3a0b01e2b956cded841666e871"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-test.md",
+    "SHA256": "031ecff86ca80bd094bb4551b8f5fd108e0be8982a6b77a052a4b95feee70603"
+  },
+  {
+    "Path": "profiles/claude/agents/tauri-windows.md",
+    "SHA256": "76c826db7ef3af4d67ec2d853e1b86996e78a132a72762a9f0bf09a69f0714aa"
+  },
+  {
+    "Path": "profiles/claude/CLAUDE.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "profiles/codex/AGENTS.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-architect.toml",
+    "SHA256": "05925adcadb78705661a179f778abca0509843beb8c26c0604fba629096fa31a"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-frontend.toml",
+    "SHA256": "eb4c6023b3526e3df2592a10bb77d63cb576c18a4a11c0343d64482d9f93a89b"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-ipc.toml",
+    "SHA256": "29a8d07ea562b9f371ad150821204b9d35912626f381ac36abd144c4d900a3ca"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-perf.toml",
+    "SHA256": "473967289c5832c0beca0b37bfd6648d7d1cb40f5f8396b715d10b0c8630ff88"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-plugins.toml",
+    "SHA256": "c36f260fbc8b0249683040a4a9fecc9a45b179cd0043d769c3431b013be1e04c"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-release.toml",
+    "SHA256": "824195742bc93b3ee377806d514f570ebbbbf170deb80a7280a2318e8cd52fb7"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-rust.toml",
+    "SHA256": "ed0ee3bf7bcbc48a83c608512c43b86279657ed9bf3b765e8812e5f4c54eb9e4"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-security.toml",
+    "SHA256": "c14db2216108d38f1e05704eafef2d49061a7ccb7ea403b75aad68fa521f8f24"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-test.toml",
+    "SHA256": "a77e86c9ca7316d7b0eeaa162aea0afd3c317a3b018745168d01b940a316b1ce"
+  },
+  {
+    "Path": "profiles/codex/agents/tauri-windows.toml",
+    "SHA256": "de873baa20586061aa29f7f8f0549e9606955539f5820bde11d618205cb903c5"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-architect.agent.md",
+    "SHA256": "9d0cc276cc76569e3d02247413f242a9162a7fb62ea5f986e05b5009a69409f6"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-frontend.agent.md",
+    "SHA256": "01104ad155f404aa7be272cffd346219cbbb904c09d7767ceac54809181c7893"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-ipc.agent.md",
+    "SHA256": "9de749f95c8c6d499d28293dccf1b4bdcf8b5ed5f0bc04de964405064873f9cc"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-perf.agent.md",
+    "SHA256": "0e7fd803c5e1f5d01468af956940b98e40cf37a3a3b83320af9784f009869aa8"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-plugins.agent.md",
+    "SHA256": "bfb0f7b2f105a7ec6dee8efe87f697fad810b1a92be97a077aff77de99b0aa20"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-release.agent.md",
+    "SHA256": "9c4adf8de3007c22ba0ba285d3fb02655d35e999ab586ab0979b55c1578d9d7f"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-rust.agent.md",
+    "SHA256": "b2d9eb6718cc26ff213a0b984142aa8a3fe4f4c172a65cc2395574e332344150"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-security.agent.md",
+    "SHA256": "9b0ca14874f3631eb3b1e9ab957ddf98b9cc6d3f8aba23a09c57a5e880368303"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-test.agent.md",
+    "SHA256": "911705bbf657261e8c27674f7c4fb8202658a2d580954684b70c16c72621c6f2"
+  },
+  {
+    "Path": "profiles/copilot/agents/tauri-windows.agent.md",
+    "SHA256": "9b549dc6885feb2ddbbced93026a1d64eb3255ec17b5bfdce7df3552983f542f"
+  },
+  {
+    "Path": "profiles/copilot/tauri-pack-guide.md",
+    "SHA256": "da89e7fed753db1634ca75730d011f53b671118636179e0d4f839a906ad6512d"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-architect.md",
+    "SHA256": "9e7ac2b1458eb66aa4ff1d1cb5e4e2c7914952cf5c0d7490ba0b6d387887c355"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-frontend.md",
+    "SHA256": "1b2a57f29b46fe991194ae5954b7527316aed7a92d1fc573e4712e7c31317564"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-ipc.md",
+    "SHA256": "559260867d5ba065598d749ad72c7ef4dd387205edc7cc41b48a4a28d68b8a7b"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-perf.md",
+    "SHA256": "1caf1adefdd43ff18c46f85c7e28356067a7a40c468b0c95489331e648efa29d"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-plugins.md",
+    "SHA256": "4cf3714f8b1d92fe8342a05ae68b9e1b3d7391365c4e699f02e3782572c40b21"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-release.md",
+    "SHA256": "903e134d50d7bc2ea96f754b197db5db803582c624e1f73ae1d8b44e1b49898a"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-rust.md",
+    "SHA256": "9868c28fcd8246011b66f6ea6db4e0530d305725e2da6f339a62c2f0a5f500ba"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-security.md",
+    "SHA256": "2950c7bf70a7ab19456cfc09786ec2e4f3ef106381bfb46eeb782ba9f141f1ec"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-test.md",
+    "SHA256": "a28ae1dabf90c1c8e029f8524a04a18af9c4e3c12df0016453b7f7513a8abe40"
+  },
+  {
+    "Path": "profiles/cursor/agents/tauri-windows.md",
+    "SHA256": "3be262f0cadf408197283fc10b5f135cf655efb180a1ba9415921bfe0b1841f5"
+  },
+  {
+    "Path": "profiles/cursor/tauri-pack-guide.md",
+    "SHA256": "da89e7fed753db1634ca75730d011f53b671118636179e0d4f839a906ad6512d"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-architect.md",
+    "SHA256": "6280f15085b337d307711a4771b0e923eecfb3bf9604125e403fd40c6e090769"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-frontend.md",
+    "SHA256": "b98c46c2c7e5262292537622f9f81a7237e5b998872a4e76907cfc3baed77bc4"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-ipc.md",
+    "SHA256": "6f8aba9e261af79fe8e809c4143562149cb9433d87a899084561e021803bfd6d"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-perf.md",
+    "SHA256": "38dd84bedd2ff8d950895cca43c06ec364c479382a073a0191271c9a43080040"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-plugins.md",
+    "SHA256": "7a149a6d2a1806fcf7bad3a4ba39cab5d19da6c70c2be70150edf0affac83195"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-release.md",
+    "SHA256": "a1255cc183433334bc1edb1ab84e4efef0ae37a25023a2bda6f2a071a7a9c062"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-rust.md",
+    "SHA256": "36881357da5078c046848cc9df49373b85f8f0440fd7893d78b246eef9551794"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-security.md",
+    "SHA256": "f66ac43cb776ac8b2f3f53557d3c30497cfc30cdfa71369cd6fb27299a03128b"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-test.md",
+    "SHA256": "cf76fdd8eee642ac172e578c6ed5a3ac2fd9d8166883e359a97c8370bf70e551"
+  },
+  {
+    "Path": "profiles/gemini/agents/tauri-windows.md",
+    "SHA256": "d9f80a5dcf44a5a5bb91400e04d8682d15393ce2f9fe6840fa988afd46132c1b"
+  },
+  {
+    "Path": "profiles/gemini/GEMINI.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack-guide.md",
+    "SHA256": "9c622d734bb9d4ec2311cbde592e1158d34f392383262744673adf71869dc101"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-architect.md",
+    "SHA256": "bfd2054cc76fa3c445cd8887ccf263f9016da6778dd925375cf66383b9a67592"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-frontend.md",
+    "SHA256": "3e7567a33fa8bce7a48a9d389fc4da0e7242187e32a33113191c9ed6c25e98df"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-ipc.md",
+    "SHA256": "5f2cd8356fe5cf658cc702a8c2f6a75ac7ce2b890cdbddd9d8586565912c8d7b"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-perf.md",
+    "SHA256": "08fb3940d26290b115c4dfc91fa8764d3b0b471c392d41f5bf17a6689e7d1952"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-plugins.md",
+    "SHA256": "e2f0328aa24e7d7037dc4d2db15cefa0037e72f5e8346404231bafdf6f5f269c"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-release.md",
+    "SHA256": "3ef5ed08e44bd13463b1a39915304f38e9e25c207076c82032181432a1283468"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-rust.md",
+    "SHA256": "79964891217faaf1e253e398ee63a62ff635ed3b583985b1bc2f6be04ce6e83f"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-security.md",
+    "SHA256": "8fc5d4833110c35c16c8c7b386385ee9b0b8402c82e407aa70afd1b9c6c0a176"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-test.md",
+    "SHA256": "03c998a5a90a940650bb915a687946870f3d99cb56d6f9a5b740ce0e3de94e7f"
+  },
+  {
+    "Path": "profiles/hermes/tauri-pack/roles/tauri-windows.md",
+    "SHA256": "aaa3e57c10b858b08ca3ed43651376f72a252807136c16a9c69a4d154f5afe92"
+  },
+  {
+    "Path": "profiles/opencode-v1/AGENTS.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-architect.md",
+    "SHA256": "bd2612724e9d7c131fae75caeda6ba77a01e959d054ca67681f82c455c5eca1d"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-frontend.md",
+    "SHA256": "8efcb7bba34742b3a6f013422edc9e9db0b6013b02a3286c082e404e0b1add3e"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-ipc.md",
+    "SHA256": "aaedf425b7b6c9ded5f0fae2b137ee3bc776d640c3ececdb8153638c3037fe11"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-perf.md",
+    "SHA256": "558c7252c15c7d099e24a0f650e0c1c9a1d9137f1cd192f644f3832b470c2765"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-plugins.md",
+    "SHA256": "fc9abc9b30e810f6534f0780e0d0fd1fb6d965c0b73838a45e0609a4ac83ac70"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-release.md",
+    "SHA256": "033666ab92f46090c1ec6bc734fab6a4ec7ca42557fb72ba9ed2cb21b36927d3"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-rust.md",
+    "SHA256": "e2efe456deb3c185f01dd81a63603eb03e4c90404e29480c0873d1778bd8a860"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-security.md",
+    "SHA256": "994a8da826ac69c8b234aebf9cc4e737976200ecac5c3959332907db1b15fe8d"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-test.md",
+    "SHA256": "25012a58df95c1cbb68e8a4172bbbe353c3fa7dd88108feb467f94cfc3bb2c44"
+  },
+  {
+    "Path": "profiles/opencode-v1/agents/tauri-windows.md",
+    "SHA256": "baab85c074a813659537ee769b7f5137e3dacaee20b6a3902fccb284501a64a2"
+  },
+  {
+    "Path": "profiles/opencode-v2/AGENTS.md",
+    "SHA256": "35665de4559558cefa88d1cd71f97cf9289115c76f34fe3b4f6fe51594984870"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-architect.md",
+    "SHA256": "949837f7b18634d12dc5899c9489842bcd6d9bfad03731faafa1778970138863"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-frontend.md",
+    "SHA256": "797f687090ebfd9ec63347bbda950ac7ad2983aa86fd992a6508062a5285bf54"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-ipc.md",
+    "SHA256": "597724c75aed6f4b8350094dbc101e184b0c2e4f0269bba6ffef5cb39e560ecd"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-perf.md",
+    "SHA256": "5d94381999d2524bd172e00434ba9df5cb71fcb3573b654a0bf01b854032059c"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-plugins.md",
+    "SHA256": "e74cb3053da653d192e13739ed9b99376780185d3abb9166e83b2f18e9dae91a"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-release.md",
+    "SHA256": "f9aefe7cbc1403405e717437150a48a31b893d00cb63f94c5be3e8f4bf8fef0b"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-rust.md",
+    "SHA256": "5f7883e01c7e9a2cc2d6916b4f9b6f3a6962e54044562772682932ee5c10be56"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-security.md",
+    "SHA256": "52ab40476c8c68f93e26d67088aacc938f981fe9b7c56f0c818d018696eaf14f"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-test.md",
+    "SHA256": "1a42a71d923a25d1362bc7e537ab16c9a3e2fee5c03bb7f2194a65ac457ba4a0"
+  },
+  {
+    "Path": "profiles/opencode-v2/agents/tauri-windows.md",
+    "SHA256": "73b8bc0453798f402b883ea840c1c3873cf5e397b500ba84485eb1a89416de2f"
+  },
+  {
+    "Path": "README.md",
+    "SHA256": "5ccafb266a960a4573f8d1abbb1f044bf641554442736969352054080d3c7df8"
+  },
+  {
+    "Path": "restore.ps1",
+    "SHA256": "79c5d0594c11593f9350dadbbf1266cd35fcfbb95bd7d020376c7d3704da2090"
+  },
+  {
+    "Path": "SMOKE-TESTS.md",
+    "SHA256": "12c9c3f173b45b0b107f088f8791ce06c6266d0cbfe7c65c54c535124371a54f"
+  },
+  {
+    "Path": "test-package.ps1",
+    "SHA256": "f643f284510d434bd28b54cd78abfff9bf53dff3e9704c56ab0bad770739971c"
+  },
+  {
+    "Path": "TEST-PS5.log",
+    "SHA256": "5727a18756009435ca1736b285789b6c442c14dfdebdf7116b718747f7eb0da4"
+  },
+  {
+    "Path": "TEST-PS7.log",
+    "SHA256": "f59a348c10d0459c223eedc48fe6992f1664101728addab99b24a8153e7cebe1"
+  },
+  {
+    "Path": "validate.ps1",
+    "SHA256": "047c8f6afe813965c5099853fd9eff6cba7c56a435c181b75e3d3a3f6f4e271c"
+  },
+  {
+    "Path": "VALIDATION-PS5.json",
+    "SHA256": "89f96f6058d392bcc82429c036146280a2891798deafe71e21b9fc9ed836328a"
+  },
+  {
+    "Path": "VALIDATION-PS7.json",
+    "SHA256": "6a4096920ddae57e3824b9b9cb73dbab01449596a5c32951f56a73c9bdfb5fa9"
+  },
+  {
+    "Path": "VALIDATION.md",
+    "SHA256": "422ee125dd6709041eced9c4d317d0cd4c2c2e0e44f8069ef93409e00dc63116"
+  },
+  {
+    "Path": "verify-formats.py",
+    "SHA256": "98a77f9c440fa308e955be83affaad36f0c688ff2a8057f87524cdba26ab08e3"
+  }
+]

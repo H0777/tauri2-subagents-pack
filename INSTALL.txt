@@ -1,0 +1,21 @@
+Tauri subagent pack 2.0.0 — Windows PowerShell 5.1+ / PowerShell 7
+
+For supported runtimes found on your computer:
+  Double-click List-Programs.cmd to inspect discovery.
+  Double-click Install-All.cmd to install with separate backups.
+  Read MULTI-HARNESS.md for formats, limitations and explicit selections.
+
+ZCode:
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+
+Check package:
+  powershell -NoProfile -ExecutionPolicy Bypass -File .\validate.ps1
+
+Preview only:
+  .\install.ps1 -WhatIf
+
+Restore using the backup path printed at installation:
+  .\restore.ps1 -BackupPath 'FULL-BACKUP-PATH'
+
+Read README.md for Arabic instructions and SMOKE-TESTS.md for app checks.
+No administrator rights, model changes, API calls, or downloads are required.

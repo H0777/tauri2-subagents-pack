@@ -1,0 +1,143 @@
+What if: Performing the operation "Install ten Tauri agents and merge managed instructions; back up changed files" on target "C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\preview".
+PASS: WhatIf creates no destination
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\zcode
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\zcode\backups\tauri-pack\20261011-182730-9a267f3a
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: zcode fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: zcode idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\zcode
+Start a NEW chat in the target program to load restored definitions.
+PASS: zcode restore
+PASS: zcode restore removes only new managed files
+Installed pack 2.0.0 (codex): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\codex
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\codex\backups\tauri-pack\20261011-182731-d95314f9
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: codex fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: codex idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\codex
+Start a NEW chat in the target program to load restored definitions.
+PASS: codex restore
+PASS: codex restore removes only new managed files
+Installed pack 2.0.0 (claude): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\claude
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\claude\backups\tauri-pack\20261011-182731-c21cede8
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: claude fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: claude idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\claude
+Start a NEW chat in the target program to load restored definitions.
+PASS: claude restore
+PASS: claude restore removes only new managed files
+Installed pack 2.0.0 (cursor): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\cursor
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\cursor\backups\tauri-pack\20261011-182731-c928740f
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: cursor fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: cursor idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\cursor
+Start a NEW chat in the target program to load restored definitions.
+PASS: cursor restore
+PASS: cursor restore removes only new managed files
+Installed pack 2.0.0 (opencode-v1): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v1
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v1\backups\tauri-pack\20261011-182732-1fadc947
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: opencode-v1 fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: opencode-v1 idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v1
+Start a NEW chat in the target program to load restored definitions.
+PASS: opencode-v1 restore
+PASS: opencode-v1 restore removes only new managed files
+Installed pack 2.0.0 (opencode-v2): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v2
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v2\backups\tauri-pack\20261011-182732-5cfd9d9f
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: opencode-v2 fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: opencode-v2 idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\opencode-v2
+Start a NEW chat in the target program to load restored definitions.
+PASS: opencode-v2 restore
+PASS: opencode-v2 restore removes only new managed files
+Installed pack 2.0.0 (gemini): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\gemini
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\gemini\backups\tauri-pack\20261011-182732-bc94472e
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: gemini fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: gemini idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\gemini
+Start a NEW chat in the target program to load restored definitions.
+PASS: gemini restore
+PASS: gemini restore removes only new managed files
+Installed pack 2.0.0 (copilot): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\copilot
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\copilot\backups\tauri-pack\20261011-182733-4d5668d1
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: copilot fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: copilot idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\copilot
+Start a NEW chat in the target program to load restored definitions.
+PASS: copilot restore
+PASS: copilot restore removes only new managed files
+Installed pack 2.0.0 (hermes): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\hermes
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\hermes\backups\tauri-pack\20261011-182733-d5c327b5
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+Hermes export is a role-prompt library for delegate_task, not a native named-agent registry. Load tauri-pack-guide.md explicitly.
+PASS: hermes fresh install
+Pack 2.0.0 is already installed with identical content. No files changed.
+PASS: hermes idempotent reinstall
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\hermes
+Start a NEW chat in the target program to load restored definitions.
+PASS: hermes restore
+PASS: hermes restore removes only new managed files
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\custom-upgrade
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\custom-upgrade\backups\tauri-pack\20261011-182733-b57bd7c8
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: custom instructions preserved and merged once
+PASS: restore refuses later edits
+PASS: conflicting restore leaves other files untouched
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\custom-upgrade
+Start a NEW chat in the target program to load restored definitions.
+PASS: restore preserves original file bytes
+PASS: unrelated agent survives install and restore
+This backup was already restored.
+PASS: repeat restore is safe
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\legacy
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\legacy\backups\tauri-pack\20261011-182734-ddfd57d3
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: exact legacy instructions upgraded without contradictory duplication
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\legacy
+Start a NEW chat in the target program to load restored definitions.
+PASS: legacy original restored byte-for-byte
+PASS: malformed markers refused before managed writes
+PASS: malformed marker failure writes no agents
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\corrupt
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\corrupt\backups\tauri-pack\20261011-182734-bd000523
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: corrupt backup refused
+PASS: corrupt backup refusal leaves destination unchanged
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\interrupted
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\interrupted\backups\tauri-pack\20261011-182734-9256fc26
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+Restored previous files: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\interrupted
+Start a NEW chat in the target program to load restored definitions.
+PASS: prepared backup recovers interrupted installation
+Installed pack 2.0.0 (zcode): C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\traversal
+Backup: C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\traversal\backups\tauri-pack\20261011-182734-40bf14e6
+Start a NEW chat and check the ten tauri-* roles. Read MULTI-HARNESS.md for runtime-specific steps.
+PASS: backup traversal record refused
+PASS: invalid manifest leaves managed files unchanged
+PASS: injected installation failure surfaces
+PASS: failed install rolls back written files
+PASS: auto detection excludes skills-only profile
+PASS: duplicate OpenCode destination refused
+What if: Performing the operation "Install Tauri pack for zcode, with backup" on target "C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75\auto-home\.zcode".
+PASS: multi-target WhatIf creates no agents
+PASS: 57 checks. Evidence retained at C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75
+
+Passed RunDirectory                                                                       
+------ ------------                                                                       
+    57 C:\Users\hussa\AppData\Local\Temp\tauri-pack-check-2e1cc3c83dce476591188cdbcffa5d75
+
+
