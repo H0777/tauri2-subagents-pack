@@ -1,0 +1,44 @@
+name: Usage experience / تجربة استخدام
+description: Share a real-world task and the environment you tested.
+title: "[Experience]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Share observations, including limitations. This report is not a compatibility certification. لا تنشر معلومات المشاريع الخاصة دون إذن."
+  - type: input
+    id: environment
+    attributes:
+      label: Harness name/version and operating system
+    validations:
+      required: true
+  - type: input
+    id: pack
+    attributes:
+      label: Pack version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task and roles used
+      description: Explain what you tried without sharing private source code.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What worked, what failed, and manual corrections
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification performed
+      description: Distinguish installation, agent discovery, and task execution. State checks not run.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional evidence
+      description: Sanitized screenshots, a public example, or reproducible steps.
