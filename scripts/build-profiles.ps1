@@ -1,12 +1,13 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param()
 . (Join-Path $PSScriptRoot 'package-tools.ps1')
-Assert-Pack $PSScriptRoot
-$common = [System.IO.File]::ReadAllText((Join-Path $PSScriptRoot 'AGENTS.md')).Replace('ZCode','the agent runtime')
+$packRoot = Get-PackRoot $PSScriptRoot
+Assert-Pack $packRoot
+$common = [System.IO.File]::ReadAllText((Join-Path $packRoot 'AGENTS.md')).Replace('ZCode','the agent runtime')
 $readOnly = @('tauri-architect','tauri-ipc','tauri-security')
 foreach ($harness in @('codex','claude','cursor','opencode-v1','opencode-v2','gemini','copilot','hermes')) {
     Set-PackHarness $harness
-    $exportRoot = Join-Path $PSScriptRoot ('profiles\' + $harness)
+    $exportRoot = Join-Path $packRoot ('profiles\' + $harness)
     [System.IO.Directory]::CreateDirectory((Join-Path $exportRoot 'agents')) | Out-Null
     $guide = $common
     if ($harness -in @('hermes','cursor','copilot')) {
@@ -17,7 +18,7 @@ foreach ($harness in @('codex','claude','cursor','opencode-v1','opencode-v2','ge
     }
     Write-PackBytes (Join-Path $exportRoot $script:InstructionFile) ($script:Utf8.GetBytes($guide))
     foreach ($name in $script:AgentNames) {
-        $source = [System.IO.File]::ReadAllText((Join-Path $PSScriptRoot ('agents\' + $name + '.md')))
+        $source = [System.IO.File]::ReadAllText((Join-Path $packRoot ('agents\' + $name + '.md')))
         $match = [regex]::Match($source, '\A---\r?\n(.*?)\r?\n---\r?\n(.+)\z', [System.Text.RegularExpressions.RegexOptions]::Singleline)
         $header = $match.Groups[1].Value
         $description = ([regex]::Match($header, '(?m)^description: (.+)$')).Groups[1].Value
@@ -64,7 +65,7 @@ foreach ($harness in @('codex','claude','cursor','opencode-v1','opencode-v2','ge
                 if (-not $isReadOnly) { $copilotTools = "tools: ['read', 'search', 'web', 'edit', 'execute']" }
                 $output = "---`nname: $name`ndescription: $description`nuser-invocable: true`ndisable-model-invocation: false`nagents: []`n$copilotTools`n---`n$body"
             }
-            'hermes' { $output = "# $name — delegated role prompt`n`n$body" }
+            'hermes' { $output = "# $name $([char]0x2014) delegated role prompt`n`n$body" }
         }
         $agentDirectory = 'agents'; if ($harness -eq 'hermes') { $agentDirectory = 'tauri-pack\roles' }
         Write-PackBytes (Join-Path $exportRoot ($agentDirectory + '\' + $name + $extension)) ($script:Utf8.GetBytes($output))

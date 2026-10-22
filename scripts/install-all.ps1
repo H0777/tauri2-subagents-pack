@@ -1,4 +1,4 @@
-﻿[CmdletBinding(SupportsShouldProcess = $true)]
+[CmdletBinding(SupportsShouldProcess = $true)]
 param(
     [ValidateSet('auto','zcode','codex','claude','cursor','opencode-v1','opencode-v2','gemini','copilot','hermes')][string[]]$Targets = @('auto'),
     [switch]$List,
@@ -6,7 +6,8 @@ param(
     [ValidateSet('v1','v2')][string]$OpenCodeVersion = 'v1'
 )
 . (Join-Path $PSScriptRoot 'package-tools.ps1')
-Assert-Pack $PSScriptRoot
+$packRoot = Get-PackRoot $PSScriptRoot
+Assert-Pack $packRoot
 $realProfile = ([Environment]::GetFolderPath('UserProfile'))
 $useEnvironment = (Get-FullPackPath $ProfileHome) -ieq (Get-FullPackPath $realProfile)
 $nativeTargets = @('zcode','codex','claude','cursor',('opencode-' + $OpenCodeVersion),'gemini','copilot','hermes')

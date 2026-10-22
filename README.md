@@ -4,7 +4,7 @@
 [![Rust](https://img.shields.io/badge/Rust-2021%20%2F%202024-orange.svg)](https://www.rust-lang.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2011%20(MSVC)-0078D6.svg)](https://microsoft.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Multi-Harness](https://img.shields.io/badge/Supported-8%20AI%20Harnesses-purple.svg)](MULTI-HARNESS.md)
+[![Multi-Harness](https://img.shields.io/badge/Supported-8%20AI%20Harnesses-purple.svg)](docs/MULTI-HARNESS.md)
 
 [English](#english) | [العربية](#العربية)
 
@@ -56,42 +56,34 @@ Includes pre-built profile generators and automatic installers for multiple AI c
 Choose the installer matching your operating system:
 
 #### 🪟 Windows (One-Click)
-- Double-click **`install-windows.cmd`** (or `Install-All.cmd`) to automatically detect and install for all supported tools.
+- Double-click **`Install.cmd`** in the root directory for an interactive installer with automatic tool discovery and installation.
+- Or run **`installers/install-windows.cmd`** (or scan with `installers/list-programs.cmd`).
 - *Or via PowerShell:*
   ```powershell
-  .\validate.ps1
-  .\install-all.ps1
+  powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1
+  powershell -ExecutionPolicy Bypass -File .\scripts\install-all.ps1
   ```
 
 #### 🍏 macOS (One-Click or Terminal)
-- **One-Click:** Double-click **`install-macos.command`** in Finder.
+- **One-Click:** Run **`Install.sh`** from root or double-click **`installers/install-macos.command`** in Finder.
 - *Or via Terminal:*
   ```bash
-  bash install-macos.sh
+  bash Install.sh
   ```
 
 #### 🐧 Linux (Terminal)
 - In your terminal, run:
   ```bash
-  bash install-linux.sh
+  bash Install.sh
   ```
-
-#### 🌐 Universal Shell Script (macOS / Linux)
-```bash
-# Auto-detect all tools and install
-bash install.sh
-
-# Or install for a specific tool (e.g. Cursor or Claude)
-bash install.sh cursor
-bash install.sh claude
-```
+  *(Platform-specific scripts are also available in `installers/`)*
 
 #### Safety, Backups & Rollback
 - **Non-destructive**: Automatically backs up original files with SHA256 checksums before applying any changes.
 - **Idempotent**: Re-running does not duplicate content or touch unchanged files.
 - **Easy Rollback**:
   ```powershell
-  .\restore.ps1 -BackupPath 'C:\Users\YOUR_USERNAME\.zcode\backups\tauri-pack\BACKUP_ID'
+  powershell -ExecutionPolicy Bypass -File .\scripts\restore.ps1 -BackupPath 'C:\Users\YOUR_USERNAME\.zcode\backups\tauri-pack\BACKUP_ID'
   ```
 
 ---
@@ -125,34 +117,57 @@ bash install.sh claude
 اختر ملف التثبيت المخصص لنظامك:
 
 #### 🪟 لمستخدمي Windows
-- اضغط مرتين (Double Click) على **`install-windows.cmd`** (أو `Install-All.cmd`) ليتم فحص البرامج والتثبيت تلقائياً.
+- اضغط مرتين (Double Click) على **`Install.cmd`** في المجلد الرئيسي لتشغيل معالج التثبيت الذكي مع خيارات الفحص والتثبيت.
+- أو يمكنك استخدام ملف **`installers/install-windows.cmd`** المباشر (أو فحص البرامج عبر `installers/list-programs.cmd`).
 - *أو عبر PowerShell:*
   ```powershell
-  .\validate.ps1
-  .\install-all.ps1
+  powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1
+  powershell -ExecutionPolicy Bypass -File .\scripts\install-all.ps1
   ```
 
 #### 🍏 لمستخدمي macOS
-- **بضغطة زر:** اضغط مرتين على **`install-macos.command`** في الـ Finder.
+- **بضغطة زر:** شغّل **`Install.sh`** في الجذر أو اضغط مرتين على **`installers/install-macos.command`** في الـ Finder.
 - *أو عبر الطرفية (Terminal):*
   ```bash
-  bash install-macos.sh
+  bash Install.sh
   ```
 
 #### 🐧 لمستخدمي Linux
 - افتح الطرفية (Terminal) وشغّل:
   ```bash
-  bash install-linux.sh
+  bash Install.sh
   ```
 
-#### 🌐 التثبيت الموحد (Mac / Linux):
-```bash
-# تثبيت لجميع البيئات المكتشفة تلقائياً
-bash install.sh
+---
 
-# أو تثبيت لبرنامج محدد (مثل cursor أو claude)
-bash install.sh cursor
-bash install.sh claude
+### هيكلية المجلدات المنظمة
+
+```
+zcode-tauri2-win11-v2/
+├── 📁 agents/            # تعريفات الوكلاء العشرة الأساسية لـ Tauri 2
+├── 📁 profiles/          # ملفات التشكيلات المصدّرة للبيئات الأخرى (Cursor, Claude, Codex, إلخ)
+├── 📁 docs/              # مجلد التوثيق والأدلة المتقدمة
+│   ├── CHANGELOG.md
+│   ├── INSTALL.txt
+│   ├── LEGACY-AGENTS.md
+│   ├── MULTI-HARNESS.md
+│   ├── SMOKE-TESTS.md
+│   └── VALIDATION.md
+├── 📁 scripts/           # سكربتات التشغيل والتحقق وبناء التشكيلات
+│   ├── build-profiles.ps1
+│   ├── install-all.ps1
+│   ├── install.ps1
+│   ├── install.sh
+│   ├── package-tools.ps1
+│   ├── restore.ps1
+│   ├── test-package.ps1
+│   └── validate.ps1
+├── 📁 installers/        # ملفات التثبيت الإضافية لأنظمة macOS و Linux
+├── 📄 Install.cmd        # 🪟 المثبت الرئيسي لنظام ويندوز بنقرة واحدة
+├── 📄 Install.sh         # 🍎/🐧 المثبت الرئيسي لأنظمة macOS / Linux
+├── 📄 AGENTS.md          # القواعد المعمارية العامة للتطوير
+├── 📄 LICENSE            # رخصة المشروع
+└── 📄 README.md          # دليل الاستخدام
 ```
 
 ---
@@ -162,15 +177,16 @@ bash install.sh claude
 - التثبيت المتكرر آمن تماماً (Idempotent) ولا يكرر التعليمات.
 - يمكنك إلغاء التثبيت واسترجاع ملفاتك السابقة في أي وقت عبر أمر:
 ```powershell
-.\restore.ps1 -BackupPath 'C:\Users\YOUR-NAME\.zcode\backups\tauri-pack\BACKUP-ID'
+powershell -ExecutionPolicy Bypass -File .\scripts\restore.ps1 -BackupPath 'C:\Users\YOUR-NAME\.zcode\backups\tauri-pack\BACKUP-ID'
 ```
 
 ---
 
 ### الوثائق والمراجع
-- [تفاصيل البرامج المدعومة وصيغها (MULTI-HARNESS.md)](MULTI-HARNESS.md)
-- [فحوصات التجربة والاختبار (SMOKE-TESTS.md)](SMOKE-TESTS.md)
-- [سجل التغييرات (CHANGELOG.md)](CHANGELOG.md)
+- [تفاصيل البرامج المدعومة وصيغها (docs/MULTI-HARNESS.md)](docs/MULTI-HARNESS.md)
+- [فحوصات التجربة والاختبار (docs/SMOKE-TESTS.md)](docs/SMOKE-TESTS.md)
+- [معايير التحقق الأمني والمعماري (docs/VALIDATION.md)](docs/VALIDATION.md)
+- [سجل التغييرات (docs/CHANGELOG.md)](docs/CHANGELOG.md)
 - [توثيق Tauri 2 الرسمي](https://v2.tauri.app/)
 
 ---

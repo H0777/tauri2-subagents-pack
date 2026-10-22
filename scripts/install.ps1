@@ -1,15 +1,16 @@
-﻿[CmdletBinding(SupportsShouldProcess = $true)]
+[CmdletBinding(SupportsShouldProcess = $true)]
 param(
     [ValidateSet('zcode','codex','claude','cursor','opencode-v1','opencode-v2','gemini','copilot','hermes')][string]$Harness = 'zcode',
     [string]$DestinationRoot
 )
 
 . (Join-Path $PSScriptRoot 'package-tools.ps1')
-Assert-Pack $PSScriptRoot
+$packRoot = Get-PackRoot $PSScriptRoot
+Assert-Pack $packRoot
 Set-PackHarness $Harness
 if (-not $DestinationRoot) { $DestinationRoot = Get-HarnessDefaultRoot $Harness ([Environment]::GetFolderPath('UserProfile')) }
-$sourceRoot = $PSScriptRoot
-if ($Harness -ne 'zcode') { $sourceRoot = Join-Path $PSScriptRoot ('profiles\' + $Harness) }
+$sourceRoot = $packRoot
+if ($Harness -ne 'zcode') { $sourceRoot = Join-Path $packRoot ('profiles\' + $Harness) }
 foreach ($relative in $script:AllowedFiles) {
     if (-not [System.IO.File]::Exists((Join-Path $sourceRoot $relative))) { throw "Missing $Harness export: $relative. Run build-profiles.ps1." }
 }
@@ -25,7 +26,8 @@ try {
         $hadOriginal = [System.IO.File]::Exists($target)
         if ($relative -eq $script:InstructionFile) {
             $existing = ''; if ($hadOriginal) { $existing = [System.IO.File]::ReadAllText($target) }
-            $legacy = ''; if ($Harness -eq 'zcode') { $legacy = [System.IO.File]::ReadAllText((Join-Path $PSScriptRoot 'LEGACY-AGENTS.md')) }
+            $legacyFile = if (Test-Path (Join-Path $packRoot 'docs\LEGACY-AGENTS.md')) { Join-Path $packRoot 'docs\LEGACY-AGENTS.md' } else { Join-Path $packRoot 'LEGACY-AGENTS.md' }
+            $legacy = ''; if ($Harness -eq 'zcode' -and (Test-Path $legacyFile)) { $legacy = [System.IO.File]::ReadAllText($legacyFile) }
             $merged = Get-MergedInstructions $existing ([System.IO.File]::ReadAllText((Join-Path $sourceRoot $script:InstructionFile))) $legacy
             $bytes = $script:Utf8.GetBytes($merged)
         } else { $bytes = [System.IO.File]::ReadAllBytes((Join-Path $sourceRoot $relative)) }

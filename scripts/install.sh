@@ -5,6 +5,11 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -d "$SCRIPT_DIR/agents" ]; then
+    PACK_ROOT="$SCRIPT_DIR"
+else
+    PACK_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+fi
 PACK_VERSION="2.0.0"
 
 # Colors for terminal output
@@ -90,13 +95,13 @@ open('$target_file', 'w', encoding='utf-8').write(new_content)
 install_harness() {
     local harness="$1"
     local dest_root="$2"
-    local src_root="$SCRIPT_DIR/profiles/$harness"
+    local src_root="$PACK_ROOT/profiles/$harness"
     local instruction_file="AGENTS.md"
     local agent_subdir="agents"
     local extension=".md"
 
     if [ "$harness" = "zcode" ]; then
-        src_root="$SCRIPT_DIR"
+        src_root="$PACK_ROOT"
     elif [ "$harness" = "codex" ]; then
         extension=".toml"
     elif [ "$harness" = "claude" ]; then

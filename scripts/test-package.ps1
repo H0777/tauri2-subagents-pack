@@ -1,7 +1,8 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param()
 . (Join-Path $PSScriptRoot 'package-tools.ps1')
-Assert-Pack $PSScriptRoot
+$packRoot = Get-PackRoot $PSScriptRoot
+Assert-Pack $packRoot
 $runRoot = Join-Path ([System.IO.Path]::GetTempPath()) ('tauri-pack-check-' + [guid]::NewGuid().ToString('N'))
 [System.IO.Directory]::CreateDirectory($runRoot) | Out-Null
 $script:Passed = @()
@@ -65,7 +66,8 @@ Assert-Case ($restoredAgain.Status -eq 'AlreadyRestored') 'repeat restore is saf
 
 $legacyRoot = Join-Path $runRoot 'legacy'
 [System.IO.Directory]::CreateDirectory($legacyRoot) | Out-Null
-Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'LEGACY-AGENTS.md') -Destination (Join-Path $legacyRoot 'AGENTS.md')
+$legacyFile = if (Test-Path (Join-Path $packRoot 'docs\LEGACY-AGENTS.md')) { Join-Path $packRoot 'docs\LEGACY-AGENTS.md' } else { Join-Path $packRoot 'LEGACY-AGENTS.md' }
+Copy-Item -LiteralPath $legacyFile -Destination (Join-Path $legacyRoot 'AGENTS.md')
 $legacyHash = Get-FileHashValue (Join-Path $legacyRoot 'AGENTS.md')
 $legacyUpgrade = & $install -DestinationRoot $legacyRoot
 $legacyText = [System.IO.File]::ReadAllText((Join-Path $legacyRoot 'AGENTS.md'))
@@ -117,8 +119,8 @@ Assert-Case ((Get-FileHashValue (Join-Path $traversalRoot 'AGENTS.md')) -eq $tra
 # Inject a single write failure into an isolated copy, proving automatic rollback.
 $faultPack = Join-Path $runRoot 'fault-package'
 [System.IO.Directory]::CreateDirectory($faultPack) | Out-Null
-Get-ChildItem -LiteralPath $PSScriptRoot -Force | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $faultPack -Recurse }
-$helperPath = Join-Path $faultPack 'package-tools.ps1'
+Get-ChildItem -LiteralPath $packRoot -Force | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $faultPack -Recurse }
+$helperPath = if (Test-Path (Join-Path $faultPack 'scripts\package-tools.ps1')) { Join-Path $faultPack 'scripts\package-tools.ps1' } else { Join-Path $faultPack 'package-tools.ps1' }
 $faultHelper = [System.IO.File]::ReadAllText($helperPath).Replace('function Write-PackBytes(', 'function Write-PackBytesCore(')
 $faultHelper += @'
 
@@ -132,7 +134,8 @@ $faultRoot = Join-Path $runRoot 'fault-destination'
 [System.IO.Directory]::CreateDirectory($faultRoot) | Out-Null
 Write-PackBytes (Join-Path $faultRoot 'AGENTS.md') ($script:Utf8.GetBytes('keep on rollback'))
 $faultOriginalHash = Get-FileHashValue (Join-Path $faultRoot 'AGENTS.md')
-Assert-Throws { & (Join-Path $faultPack 'install.ps1') -DestinationRoot $faultRoot } 'injected installation failure surfaces'
+$faultInstall = if (Test-Path (Join-Path $faultPack 'scripts\install.ps1')) { Join-Path $faultPack 'scripts\install.ps1' } else { Join-Path $faultPack 'install.ps1' }
+Assert-Throws { & $faultInstall -DestinationRoot $faultRoot } 'injected installation failure surfaces'
 Assert-Case ((Get-FileHashValue (Join-Path $faultRoot 'AGENTS.md')) -eq $faultOriginalHash -and -not (Test-Path -LiteralPath (Join-Path $faultRoot 'agents\tauri-architect.md'))) 'failed install rolls back written files'
 
 $autoHome = Join-Path $runRoot 'auto-home'

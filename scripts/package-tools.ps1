@@ -1,4 +1,4 @@
-﻿# Shared by installation, restoration and validation. Windows PowerShell 5.1+.
+# Shared by installation, restoration and validation. Windows PowerShell 5.1+.
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $script:PackVersion = '2.0.0'
@@ -132,14 +132,24 @@ function Get-MergedInstructions([string]$Existing, [string]$Instructions, [strin
     return $Existing + "`r`n`r`n" + $block + "`r`n"
 }
 
+function Get-PackRoot([string]$StartPath) {
+    if (-not $StartPath) { $StartPath = $PSScriptRoot }
+    $curr = [System.IO.Path]::GetFullPath($StartPath)
+    if (Test-Path -LiteralPath (Join-Path $curr 'agents')) { return $curr }
+    $parent = Split-Path -Parent $curr
+    if (Test-Path -LiteralPath (Join-Path $parent 'agents')) { return $parent }
+    return $curr
+}
+
 function Assert-Pack([string]$Root) {
+    $packRoot = Get-PackRoot $Root
     $allowedKeys = @('name','description','color','model','tools','injectAgentsMd','maxTurns')
     $readOnly = @('tauri-architect','tauri-ipc','tauri-security')
     $validTools = @('Read','Grep','Glob','Bash','Edit','Write','WebFetch','WebSearch','TodoWrite')
-    $agentFiles = @(Get-ChildItem -LiteralPath (Join-Path $Root 'agents') -Filter '*.md' -File)
+    $agentFiles = @(Get-ChildItem -LiteralPath (Join-Path $packRoot 'agents') -Filter '*.md' -File)
     if ($agentFiles.Count -ne 10) { throw 'The package must contain exactly ten agent files.' }
     foreach ($name in $script:AgentNames) {
-        $path = Join-Path $Root ('agents\' + $name + '.md')
+        $path = Join-Path $packRoot ('agents\' + $name + '.md')
         $content = [System.IO.File]::ReadAllText($path)
         $match = [regex]::Match($content, '\A---\r?\n(.*?)\r?\n---\r?\n(.+)\z', [System.Text.RegularExpressions.RegexOptions]::Singleline)
         if (-not $match.Success) { throw "Invalid frontmatter/body: $name" }
@@ -164,10 +174,20 @@ function Assert-Pack([string]$Root) {
         }
         if ($match.Groups[2].Value -notmatch '(?i)do not.*launch subagents|do not.*launch other subagents') { throw "Missing child delegation boundary: $name" }
     }
-    foreach ($file in @('AGENTS.md','LEGACY-AGENTS.md','install.ps1','restore.ps1','validate.ps1','package-tools.ps1','README.md','INSTALL.txt','SMOKE-TESTS.md')) {
-        if (-not (Test-Path -LiteralPath (Join-Path $Root $file) -PathType Leaf)) { throw "Missing package file: $file" }
+    $docDir = if (Test-Path (Join-Path $packRoot 'docs')) { Join-Path $packRoot 'docs' } else { $packRoot }
+    $scriptDir = if (Test-Path (Join-Path $packRoot 'scripts')) { Join-Path $packRoot 'scripts' } else { $packRoot }
+    if (-not (Test-Path -LiteralPath (Join-Path $packRoot 'AGENTS.md') -PathType Leaf)) { throw "Missing package file: AGENTS.md" }
+    if (-not (Test-Path -LiteralPath (Join-Path $packRoot 'README.md') -PathType Leaf)) { throw "Missing package file: README.md" }
+    foreach ($file in @('LEGACY-AGENTS.md','INSTALL.txt','SMOKE-TESTS.md')) {
+        $found = (Test-Path -LiteralPath (Join-Path $docDir $file) -PathType Leaf) -or (Test-Path -LiteralPath (Join-Path $packRoot $file) -PathType Leaf)
+        if (-not $found) { throw "Missing package file: $file" }
     }
-    foreach ($path in @(Get-ChildItem -LiteralPath $Root -Filter '*.ps1' -File)) {
+    foreach ($file in @('install.ps1','restore.ps1','validate.ps1','package-tools.ps1')) {
+        $found = (Test-Path -LiteralPath (Join-Path $scriptDir $file) -PathType Leaf) -or (Test-Path -LiteralPath (Join-Path $packRoot $file) -PathType Leaf)
+        if (-not $found) { throw "Missing package file: $file" }
+    }
+    $ps1Files = @(Get-ChildItem -LiteralPath $packRoot -Filter '*.ps1' -File) + @(Get-ChildItem -LiteralPath $scriptDir -Filter '*.ps1' -File) | Select-Object -Unique
+    foreach ($path in $ps1Files) {
         $tokens = $null; $parseErrors = $null
         [System.Management.Automation.Language.Parser]::ParseFile($path.FullName, [ref]$tokens, [ref]$parseErrors) | Out-Null
         if ($parseErrors.Count -gt 0) { throw "PowerShell parse error in $($path.Name): $($parseErrors[0].Message)" }
